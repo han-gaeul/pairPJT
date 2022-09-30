@@ -3,9 +3,8 @@
 
 {% block content %}
   
-  <h1>제목</h1>
-  <p>내용</p>
-  <a href="">리뷰 수정</a> / <a href="">리뷰 삭제</a>
+  <h1>제목 : {{ review.title }}</h1>
+  <p>{{ review.content }}</p>
+  <a href="{% url 'pairApp:edit' review.pk %}">리뷰 수정</a> / <a href="{% url 'pairApp:delete' review.pk %}">리뷰 삭제</a>
 
 {% endblock content %}
-  
