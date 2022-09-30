@@ -1,20 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
-    }
-  </style>
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/3ef4088aa9.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
   
@@ -23,6 +21,30 @@
       
     {% endblock content %}
   </div>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div class="footer__icons">
+        <div class="footer__icon">
+          <i class="fa-solid fa-house"></i>
+          <p class="footer__text">홈</p>
+        </div>
+        <div class="footer__icon">
+          <i class="fa-solid fa-comment-dots"></i>
+          <p class="footer__text">커뮤니티</p>
+        </div>
+        <div class="footer__icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p class="footer__text">탐색</p>
+        </div>
+        <div class="footer__icon">
+          <i class="fa-solid fa-user"></i>
+          <p class="footer__text">유저</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
     
 
 </body>

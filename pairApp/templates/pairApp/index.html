@@ -3,8 +3,30 @@
 
 
 {% block content %}
+<nav class="nav">
+  <div class="container nav__wrap">
+    <h1 class="nav__title">커뮤니티</h1>
+  </div>
+</nav>
 
-<a href="{% url 'pairApp:new' %}">리뷰 작성</a>
+<div class="index-wrap mt-5">
+  <div class="menu">
+    {% for review in reviews %}
+    <a href="{% url 'pairApp:detail' review.pk %}">
+      <div class="menu__item rounded-4 p-3 mb-3">
+        <h3 class="menu__title">{{ review.title }}</h3>
+        <p class="menu__content">{{ review.content }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>  
+  <div class="write btn btn-primary">
+    <a href="{% url 'pairApp:new' %}">글 작성하기</a>
+    <i class="fa-solid fa-pen"></i>
+  </div>
+</div>
+
+<!-- 
 <table class="table">
   <thead class="table-dark">
     <tr>
@@ -22,7 +44,7 @@
     </tr>
     {% endfor %}
   </tbody>
-</table>
+</table> -->
 
 {% endblock content %}
   
