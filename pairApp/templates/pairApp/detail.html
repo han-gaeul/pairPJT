@@ -2,9 +2,44 @@
 
 
 {% block content %}
-  
-  <h1>제목 : {{ review.title }}</h1>
-  <p>{{ review.content }}</p>
-  <a href="{% url 'pairApp:edit' review.pk %}">리뷰 수정</a> / <a href="{% url 'pairApp:delete' review.pk %}">리뷰 삭제</a>
+<!-- modal -->
+<div class="modal fade" id="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: var(--color-dark);">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: var(--color-white);"></button>
+      </div>
+      <div class="modal-body d-flex flex-column">
+        <a href="{% url 'pairApp:edit' review.pk %}" class="btn mb-2" style="color: var(--color-white);">리뷰 수정</a>
+        <a href="{% url 'pairApp:delete' review.pk %}" class="btn" style="color: var(--color-white);">리뷰 삭제</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="detail-top m-3">
+  <div class="container detail-wrap">
+    <a href="{% url 'pairApp:index' %}"><i class="fa-solid fa-chevron-left fa-2x"></i></a>
+    <a href="" data-bs-toggle="modal" data-bs-target="#modal">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <form action="{% url 'pairApp:create' %}">
+    <div class="new-bottom">
+      <div class="new-wrap p-4 rounded-5">
+        <div class="mb-3 new-input">
+          <h1 class="text-white">{{ review.title }}</h1>
+        </div>
+        <div class="mb-3">
+          <p>{{ review.content }}</p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
 
 {% endblock content %}

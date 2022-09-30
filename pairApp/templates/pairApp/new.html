@@ -2,30 +2,31 @@
 
 
 {% block content %}
-
-<form action="{% url 'pairApp:create' %}">
-  <div class="new-top m-5">
-    <a href="{% url 'pairApp:index' %}"><i class="fa-solid fa-chevron-left fa-2x"></i></a>
-    <h2>글쓰기</h2>
-    <button type="submit" class='btn btn-light'>저장</button>
-  </div>
-
-  <div class="new-bottom">
-    <div class="new-wrap p-4 rounded-5">
-      <div class="mb-3 new-input">
-        <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="제목을 입력해주세요." 
-        style="
-        background: transparent; 
-        border: none; 
-        color: var(--color-white);
-        ">
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content" placeholder="본문에 #을 입력하면 작품 검색 및 등록이 가능해요. 작품이 등록된 게시글은 따로 모아 확인할 수 있어요." style="background: transparent; border: none; color: var(--color-white);"></textarea>
+<div class="container">
+  <form action="{% url 'pairApp:create' %}">
+    <div class="new-top m-5">
+      <a href="{% url 'pairApp:index' %}"><i class="fa-solid fa-chevron-left fa-2x"></i></a>
+      <h2>글쓰기</h2>
+      <button type="submit" class='btn btn-light'>저장</button>
+    </div>
+  
+    <div class="new-bottom">
+      <div class="new-wrap p-4 rounded-5">
+        <div class="mb-3 new-input">
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="제목을 입력해주세요." 
+          style="
+          background: transparent; 
+          border: none; 
+          color: var(--color-white);
+          ">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="content" placeholder="본문에 #을 입력하면 작품 검색 및 등록이 가능해요. 작품이 등록된 게시글은 따로 모아 확인할 수 있어요." style="background: transparent; border: none; color: var(--color-white);"></textarea>
+        </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
 
 {% endblock content %}
   
