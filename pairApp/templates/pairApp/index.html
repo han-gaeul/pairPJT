@@ -19,7 +19,10 @@
         {% for review in reviews %}
         <a href="{% url 'pairApp:detail' review.pk %}">
           <div class="menu__item rounded-4 p-3 mb-3">
-            <h3 class="menu__title">{{ review.title }}</h3>
+            <h3 class="menu__title">
+              {{ review.title }}
+              <span class="menu__date">{{ review.created_at | date:'m월 d일' }}</span>
+            </h3>
             <p class="menu__content">{{ review.content }}</p>
           </div>
         </a>

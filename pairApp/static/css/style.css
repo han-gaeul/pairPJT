@@ -79,6 +79,14 @@ p {
 
 .menu__title {
   color: var(--color-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__date {
+  font-size: var(--font-micro);
+  color: var(--color-light-gray);
 }
 
 .menu__content {
