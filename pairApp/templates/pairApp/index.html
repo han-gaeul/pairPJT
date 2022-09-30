@@ -2,14 +2,19 @@
 
 
   {% block content %}
+
+  <!-- Nav -->
   <nav class="nav">
     <div class="container nav__wrap">
       <h1 class="nav__title">커뮤니티</h1>
     </div>
   </nav>
 
+  <!-- Container -->
   <div class="container">
     <div class="index-wrap mt-5">
+      
+      <!-- Menu -->
       <div class="menu">
         {% for review in reviews %}
         <a href="{% url 'pairApp:detail' review.pk %}">
@@ -20,10 +25,15 @@
         </a>
         {% endfor %}
       </div>  
-      <div class="write btn btn-primary">
-        <a href="{% url 'pairApp:new' %}" style="color: var(--color-white);">글 작성하기</a>
-        <i class="fa-solid fa-pen"></i>
-      </div>
+      
+      <!-- Write-btn -->
+      <a href="{% url 'pairApp:new' %}" style="color: var(--color-white);">
+        <div class="write btn btn-primary">
+          <span>글 작성하기</span>
+          <i class="fa-solid fa-pen"></i>
+        </div>
+      </a>
+      
     </div>
   </div>
 
@@ -45,8 +55,7 @@
     </tr>
     {% endfor %}
   </tbody>
-</table> -->
+</table>
+-->
 
 {% endblock content %}
-
-  

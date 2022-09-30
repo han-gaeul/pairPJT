@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<!-- modal -->
+<!-- Modal -->
 <div class="modal fade" id="modal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content" style="background-color: var(--color-dark);">
@@ -17,6 +17,7 @@
   </div>
 </div>
 
+<!-- Detail-top -->
 <div class="detail-top m-3">
   <div class="container detail-wrap">
     <a href="{% url 'pairApp:index' %}"><i class="fa-solid fa-chevron-left fa-2x"></i></a>
@@ -26,6 +27,7 @@
   </div>
 </div>
 
+<!-- Detail-bottom -->
 <div class="container">
   <form action="{% url 'pairApp:create' %}">
     <div class="new-bottom">

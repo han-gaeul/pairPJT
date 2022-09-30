@@ -29,6 +29,7 @@
 /* Global */
 body {
   background-color: var(--color-dark);
+  position: relative;
 }
 
 a {
@@ -43,6 +44,7 @@ p {
 .container {
   width: 65%;
 }
+
 
 /* Nav */
 .nav {
@@ -121,4 +123,31 @@ p {
   font-size: var(--font-micro);
   margin: 0;
   margin-top: 5px;
+}
+
+
+@media (max-width: 1100px) {
+  .index-wrap {
+    flex-direction: column;
+  }
+
+  .menu__item {
+    margin: 0 auto;
+  }
+
+  .write {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .write span {
+    display: none;
+  }
 }

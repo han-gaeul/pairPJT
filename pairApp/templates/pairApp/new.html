@@ -2,14 +2,18 @@
 
 
 {% block content %}
+
 <div class="container">
   <form action="{% url 'pairApp:create' %}">
+
+    <!-- New-top -->
     <div class="new-top m-5">
       <a href="{% url 'pairApp:index' %}"><i class="fa-solid fa-chevron-left fa-2x"></i></a>
       <h2>글쓰기</h2>
       <button type="submit" class='btn btn-light'>저장</button>
     </div>
   
+    <!-- New-bottom -->
     <div class="new-bottom">
       <div class="new-wrap p-4 rounded-5">
         <div class="mb-3 new-input">
@@ -25,6 +29,7 @@
         </div>
       </div>
     </div>
+    
   </form>
 </div>
 
